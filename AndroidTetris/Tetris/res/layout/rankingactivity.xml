@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="#000000">
+    
+    <!-- layout of input -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#70ffffff"
+	    android:gravity="center"
+	    >
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+	        android:textColor="#ffffff"
+	        android:text="- Ranking -"
+	        />
+	</LinearLayout>
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="Name"
+	    android:textColor="#ffffff"
+	    android:layout_marginTop="20sp"
+	    />
+	<EditText
+	    android:id="@+id/et_setting_name"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="your name"
+	    />
+	
+	<!-- layout of button -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center"
+	    android:background="#40dddddd"
+	    android:layout_marginTop="5sp"
+	    >
+		<Button
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#80ffffff"
+	        android:padding="15sp"
+	       	android:onClick="mOnClick"
+	        android:textColor="#ffffff"
+	        android:text="all list"
+	        android:id="@+id/btn_ranking_all"
+		    />
+		<Button
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#80ffffff"
+	        android:padding="15sp"
+	       	android:onClick="mOnClick"
+	        android:textColor="#ffffff"
+	        android:layout_marginLeft="10sp"
+	        android:text="serch me"
+	        android:id="@+id/btn_ranking_search"
+		    />   
+    	<Button
+		    android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="#80ffffff"
+	        android:padding="15sp"
+	       	android:onClick="mOnClick"
+	        android:textColor="#ffffff"
+	        android:layout_marginLeft="10sp"
+	        android:text="exit"
+	        android:id="@+id/btn_ranking_exit"
+		    />     
+	</LinearLayout>
+	
+	<!-- column of list view -->
+	<LinearLayout
+  	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:gravity="center"
+	    android:background="#40dddddd"
+	    android:layout_marginTop="5sp"
+	    >
+    	<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="rank"
+		    android:layout_marginLeft="10sp"
+		    android:layout_weight="2"
+		    android:textColor="#ffffff"		    
+		    />
+    	<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="name"
+		    android:layout_weight="2"
+		    android:textColor="#ffffff"		    
+		    />
+    	<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="level"
+		    android:layout_weight="2"
+		    android:textColor="#ffffff"		    
+		    />
+    	<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="score"
+		    android:layout_weight="3"
+		    android:textColor="#ffffff"		    
+		    />   
+	</LinearLayout>
+	
+	<!-- list view -->
+	<ListView
+	    android:id="@+id/lv_ranking_listview" 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10sp"
+	    android:background="#90ffffff"
+	    />
+	    
+	
+</LinearLayout>

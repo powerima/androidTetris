@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    
+    android:background="#000000"
+    >
+    <!-- 상단 레이아웃 -->	
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#70ffffff" 
+        android:id="@+id/layout_top"
+        android:gravity="center"
+        >
+    </LinearLayout>
+    
+	<!-- 하단 레이아웃 -->
+	<LinearLayout
+	    android:id="@+id/layout_bottom"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:background="#70ffffff" 
+	    android:gravity="center"
+	    >
+	    
+        <Button
+            android:id="@+id/btn_arrowleft"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+  			android:padding="20sp"
+	        android:textColor="#ffffff"	 
+	        android:background="#00ffffff"     
+	        android:onClick="mOnClick"  
+	        android:text="◀" 
+	        />
+	        
+        <Button
+            android:id="@+id/btn_arrowdown"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+	        android:padding="20sp"
+	  		android:background="#00ffffff"
+	        android:textColor="#ffffff"	    
+	        android:onClick="mOnClick"    
+	        android:text="▼" 
+	        />
+        
+        <Button
+            android:id="@+id/btn_arrowright"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="10sp"
+	        android:padding="20sp"
+	        android:textColor="#ffffff"	 
+	        android:background="#00ffffff"       
+	        android:onClick="mOnClick"
+	        android:text="▶" 
+	        />	    
+	</LinearLayout>
+	
+
+	<Button
+   	    android:id="@+id/btn_arrowup"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@id/layout_bottom"
+	    android:background="#70ffffff" 
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="2sp"
+	    android:padding="20sp"
+	    android:gravity="center"
+	    android:onClick="mOnClick"
+		android:textColor="#ffffff"	        
+      	android:text="▲" 
+	    />
+
+	
+    <!-- 왼쪽 레이아웃 -->
+    <LinearLayout
+        android:id="@+id/layout_left"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"   
+		android:background="#70ffffff"          
+		android:gravity="center"        
+		android:onClick="mOnClick"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_margin="10sp"
+            
+            />        
+   	</LinearLayout>
+            
+	<!-- 오른쪽 레이아웃 -->
+	<LinearLayout
+	    android:id="@+id/layout_right"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent" 
+	    android:layout_alignParentRight="true"
+	    android:background="#70ffffff"
+	    android:onClick="mOnClick"
+	    android:gravity="center"
+	    >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:layout_margin="10sp"
+            />    	    
+   </LinearLayout>
+   
+   	<!-- 테트리스 테이블 레이아웃 -->
+	<LinearLayout
+        android:id="@+id/layout_tetristable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_toRightOf="@id/layout_left"   
+        android:layout_below="@id/layout_top"  
+        android:gravity="center"       
+        android:onClick="mOnClick"
+        android:layout_marginTop="50sp"
+        >	   
+	</LinearLayout> 
+        
+	<!-- 다음 블럭 레이아웃 -->
+	<LinearLayout
+	    android:id="@+id/layout_nextBlock"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/layout_top"  
+	    android:layout_toRightOf="@id/layout_tetristable"
+	    android:layout_marginTop="100sp"
+	    >	    
+	</LinearLayout>
+	
+	<!-- 점수판  레이아웃 -->
+	<LinearLayout
+	    android:id="@+id/layout_score"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/layout_nextBlock"
+	    android:layout_alignLeft="@id/layout_nextBlock"	    
+	    android:layout_alignRight="@id/layout_nextBlock"
+	    android:layout_marginTop="40sp"
+	    >	 
+	</LinearLayout>
+
+
+	   
+    
+</RelativeLayout>
